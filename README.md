@@ -49,6 +49,8 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
     php artisan serve
     ```
 
+---
+
 ## Rotas Disponíveis
 
 ### Autenticação
@@ -201,13 +203,18 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
+---
+
 ## Arquivo de Importação para Postman
 
 -   Disponibilizarei um arquivo configurado para facilitar o teste das rotas via Postman. Basta importá-lo e ajustar as variáveis de ambiente (como token de autenticação).
+
     ```bash
     https://www.google.com/
 
     ```
+
+---
 
 ## Dificuldades Encontradas
 
