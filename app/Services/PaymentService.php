@@ -15,20 +15,31 @@ class PaymentService
 
     public function processPayment(int $amount, string $name, string $email, string $cardNumber, string $cvv): array
     {
+        $successfulResponse = null;
         foreach ($this->gateways as $gateway) {
             $gatewayClass = 'App\\Services\\Gateways\\' . $gateway->class_name;
             if (class_exists($gatewayClass)) {
                 $gatewayInstance = app($gatewayClass);
-                $response = $gatewayInstance->createTransaction($amount, $name, $email, $cardNumber, $cvv);
-                if ($response['status'] != 'error') {
-                    $response['gateway_id'] = $gateway->id;
-                    return $response;
+                try {
+                    $response = $gatewayInstance->createTransaction($amount, $name, $email, $cardNumber, $cvv);
+                    if ($response['status'] != 'error') {
+                        $response['gateway_id'] = $gateway->id;
+                        $successfulResponse = $response;
+                        break;
+                    } else {
+                    }
+                } catch (\Exception $e) {
+                    // Aqui pode jogar pra um log os gateways que não funcionarem para ir analisando
                 }
             } else {
                 continue;
             }
         }
-        return ['status' => 'error', 'message' => 'All gateways failed to process payment.'];
+        if ($successfulResponse) {
+            return $successfulResponse;
+        } else {
+            return ['status' => 'error'];
+        }
     }
 
     public function refundPayment(string $transactionId, int $gatewayId): array
