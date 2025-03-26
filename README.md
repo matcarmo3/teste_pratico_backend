@@ -55,7 +55,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
 ### Autenticação
 
--   **POST** `/login`: Autenticação do usuário.
+-   **POST** `/api/login`: Autenticação do usuário.
 
     -   **Corpo da Requisição**:
         ```json
@@ -65,7 +65,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **POST** `/register`: Registro de um novo usuário.
+-   **POST** `/api/register`: Registro de um novo usuário.
 
     -   **Corpo da Requisição**:
         ```json
@@ -76,15 +76,15 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **POST** `/logout`: Logout do usuário (requer autenticação).
+-   **POST** `/api/logout`: Logout do usuário (requer autenticação).
 
 ### Gestão de Usuários (Role: `manager`)
 
--   **GET** `/users`: Listagem de usuários.
+-   **GET** `/api/users`: Listagem de usuários.
 
--   **GET** `/users/{id}`: Detalhes de um usuário.
+-   **GET** `/api/users/{id}`: Detalhes de um usuário.
 
--   **POST** `/users`: Criação de um novo usuário.
+-   **POST** `/api/users`: Criação de um novo usuário.
 
     -   **Corpo da Requisição**:
         ```json
@@ -96,7 +96,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **PUT** `/users/{id}`: Atualização de um usuário existente.
+-   **PUT** `/api/users/{id}`: Atualização de um usuário existente.
 
     -   **Corpo da Requisição**:
         ```json
@@ -107,15 +107,15 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **DELETE** `/users/{id}`: Exclusão de um usuário.
+-   **DELETE** `/api/users/{id}`: Exclusão de um usuário.
 
 ### Produtos (Roles: `manager`, `finance`)
 
--   **GET** `/products`: Listagem de produtos.
+-   **GET** `/api/products`: Listagem de produtos.
 
--   **GET** `/products/{id}`: Detalhes de um produto.
+-   **GET** `/api/products/{id}`: Detalhes de um produto.
 
--   **POST** `/products`: Criação de um novo produto.
+-   **POST** `/api/products`: Criação de um novo produto.
 
     -   **Corpo da Requisição**:
         ```json
@@ -126,7 +126,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **PUT** `/products/{id}`: Atualização de um produto existente.
+-   **PUT** `/api/products/{id}`: Atualização de um produto existente.
 
     -   **Corpo da Requisição**:
         ```json
@@ -137,15 +137,15 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **DELETE** `/products/{id}`: Exclusão de um produto.
+-   **DELETE** `/api/products/{id}`: Exclusão de um produto.
 
 ### Gateways de Pagamento (Role: `admin`)
 
--   **GET** `/gateways`: Listagem de gateways de pagamento.
+-   **GET** `/api/gateways`: Listagem de gateways de pagamento.
 
--   **GET** `/gateways/{id}`: Detalhes de um gateway.
+-   **GET** `/api/gateways/{id}`: Detalhes de um gateway.
 
--   **POST** `/gateways`: Criação de um novo gateway.
+-   **POST** `/api/gateways`: Criação de um novo gateway.
 
     -   **Corpo da Requisição**:
         ```json
@@ -157,7 +157,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **PUT** `/gateways/{id}`: Atualização de um gateway existente.
+-   **PUT** `/api/gateways/{id}`: Atualização de um gateway existente.
 
     -   **Corpo da Requisição**:
         ```json
@@ -169,15 +169,15 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
         }
         ```
 
--   **DELETE** `/gateways/{id}`: Exclusão de um gateway.
+-   **DELETE** `/api/gateways/{id}`: Exclusão de um gateway.
 
 ### Transações (Role: `finance`)
 
--   **GET** `/transactions`: Listagem de transações.
+-   **GET** `/api/transactions`: Listagem de transações.
 
--   **GET** `/transactions/{id}`: Detalhes de uma transação.
+-   **GET** `/api/transactions/{id}`: Detalhes de uma transação.
 
--   **POST** `/transactions/{id}/refund`: Reembolso de uma transação.
+-   **POST** `/api/transactions/{id}/refund`: Reembolso de uma transação.
     -   **Corpo da Requisição**:
         ```json
         {
@@ -187,11 +187,11 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
 ### Transações do Usuário
 
--   **GET** `/user/transactions`: Listagem das transações realizadas pelo usuário logado.
+-   **GET** `/api/user/transactions`: Listagem das transações realizadas pelo usuário logado.
 
     -   **Corpo da Requisição**: Não é necessário corpo de requisição.
 
-    **POST** `/transactions`: Criação de uma nova transação.
+    **POST** `/api/transactions`: Criação de uma nova transação.
 
     -   **Corpo da Requisição**:
         ```json
