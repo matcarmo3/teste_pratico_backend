@@ -209,10 +209,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
 -   Disponibilizarei um arquivo configurado para facilitar o teste das rotas via Postman. Basta importá-lo e ajustar as variáveis de ambiente (como token de autenticação).
 
-    ```bash
-    https://www.google.com/
-
-    ```
+    [Teste-Pratico-Backend.json](https://github.com/matcarmo3/teste_pratico_backend/blob/master/Teste-Pratico-Backend.json)
 
 ---
 
