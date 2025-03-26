@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "6b6362fe-ef71-47b9-a1cc-cb90b9b25010",
 		"name": "Teste-Pratico-Backend",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "8381586"
 	},
 	"item": [
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"admin@teste.com\",\r\n    \"password\": \"admin\"\r\n}",
+							"raw": "{\r\n    \"email\": \"user@teste.com\",\r\n    \"password\": \"user\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -62,21 +62,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/register",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"register"
-							]
-						}
+						"url": "http://127.0.0.1:8000/api/register"
 					},
 					"response": []
 				},
@@ -85,31 +71,13 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "2|kawSkUsEFC8bzTppHtPNMEPnkV0gVfNHTDfcw6Rnd3c9e4d4",
-									"type": "string"
-								}
-							]
+							"bearer": {
+								"token": "2|kawSkUsEFC8bzTppHtPNMEPnkV0gVfNHTDfcw6Rnd3c9e4d4"
+							}
 						},
 						"method": "POST",
 						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/logout",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"logout"
-							]
-						}
+						"url": "http://127.0.0.1:8000/api/logout"
 					},
 					"response": []
 				}
@@ -119,38 +87,20 @@
 			"name": "Private",
 			"item": [
 				{
-					"name": "Usuarios",
+					"name": "Usuarios (manager)",
 					"item": [
 						{
 							"name": "Todos Usuarios",
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "22|dMzmelPdGOapaWRCkQJ7CpaKUJsDFsKvFS2qH4HM59710341",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "2|Wp9AvpaWNVUiTSW0k2weQIZdevAVDjBRLmkKXpWs91c701eb"
+									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/users",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"users"
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/users"
 							},
 							"response": []
 						},
@@ -159,13 +109,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "22|dMzmelPdGOapaWRCkQJ7CpaKUJsDFsKvFS2qH4HM59710341",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "22|dMzmelPdGOapaWRCkQJ7CpaKUJsDFsKvFS2qH4HM59710341"
+									}
 								},
 								"method": "GET",
 								"header": [],
@@ -199,13 +145,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "23|uO3PrFvXyFEH8bfinwutaRWetFbVQKJRNq7T8dZjda5b924b",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "23|uO3PrFvXyFEH8bfinwutaRWetFbVQKJRNq7T8dZjda5b924b"
+									}
 								},
 								"method": "POST",
 								"header": [],
@@ -218,21 +160,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/users",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"users"
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/users"
 							},
 							"response": []
 						},
@@ -241,13 +169,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "23|uO3PrFvXyFEH8bfinwutaRWetFbVQKJRNq7T8dZjda5b924b",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "23|uO3PrFvXyFEH8bfinwutaRWetFbVQKJRNq7T8dZjda5b924b"
+									}
 								},
 								"method": "PUT",
 								"header": [],
@@ -290,13 +214,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "23|uO3PrFvXyFEH8bfinwutaRWetFbVQKJRNq7T8dZjda5b924b",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "23|uO3PrFvXyFEH8bfinwutaRWetFbVQKJRNq7T8dZjda5b924b"
+									}
 								},
 								"method": "DELETE",
 								"header": [],
@@ -324,76 +244,24 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "Transações",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/user/transactions",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"user",
-										"transactions"
-									]
-								}
-							},
-							"response": []
 						}
 					]
 				},
 				{
-					"name": "Produto",
+					"name": "Produto (finance|manager)",
 					"item": [
 						{
 							"name": "Todos Produtos",
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399"
+									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/products",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"products"
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/products"
 							},
 							"response": []
 						},
@@ -402,13 +270,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399"
+									}
 								},
 								"method": "GET",
 								"header": [],
@@ -442,13 +306,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399"
+									}
 								},
 								"method": "POST",
 								"header": [],
@@ -461,22 +321,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/products/",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"products",
-										""
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/products/"
 							},
 							"response": []
 						},
@@ -485,13 +330,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399"
+									}
 								},
 								"method": "PUT",
 								"header": [],
@@ -534,13 +375,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "3|Lglibk39fcP0k8iqVPxz0ebNFPxLD2LetGELf70F09239399"
+									}
 								},
 								"method": "DELETE",
 								"header": [],
@@ -572,38 +409,20 @@
 					]
 				},
 				{
-					"name": "Gateway",
+					"name": "Gateway (admin)",
 					"item": [
 						{
 							"name": "Todos Gateways",
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7"
+									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/gateways",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"gateways"
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/gateways"
 							},
 							"response": []
 						},
@@ -612,13 +431,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7"
+									}
 								},
 								"method": "GET",
 								"header": [],
@@ -652,13 +467,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7"
+									}
 								},
 								"method": "POST",
 								"header": [],
@@ -671,21 +482,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/gateways",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"gateways"
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/gateways"
 							},
 							"response": []
 						},
@@ -694,13 +491,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7"
+									}
 								},
 								"method": "PUT",
 								"header": [],
@@ -743,13 +536,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7"
+									}
 								},
 								"method": "DELETE",
 								"header": [],
@@ -781,38 +570,20 @@
 					]
 				},
 				{
-					"name": "Transação",
+					"name": "Transação (finance)",
 					"item": [
 						{
 							"name": "Todas Transações",
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "1|QMZy2AEczSoxgbQrlCeL6LpN6NHjYdXBMPlGaLwbf7b2d27b"
+									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/transactions",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"transactions"
-									]
-								}
+								"url": "http://127.0.0.1:8000/api/transactions"
 							},
 							"response": []
 						},
@@ -821,13 +592,9 @@
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "1|QMZy2AEczSoxgbQrlCeL6LpN6NHjYdXBMPlGaLwbf7b2d27b"
+									}
 								},
 								"method": "GET",
 								"header": [],
@@ -857,59 +624,13 @@
 							"response": []
 						},
 						{
-							"name": "Criar",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"product_id\": 3,\r\n    \"amount\": 5,\r\n    \"card\": \"5569000000006063\",\r\n    \"cvv\": \"100\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://127.0.0.1:8000/api/transactions",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8000",
-									"path": [
-										"api",
-										"transactions"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Reembolso",
 							"request": {
 								"auth": {
 									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "4|as1yYqRqwNeRVhiGM74RGgiqs0GeEit8kYVlzz1ja50d42f7",
-											"type": "string"
-										}
-									]
+									"bearer": {
+										"token": "1|QMZy2AEczSoxgbQrlCeL6LpN6NHjYdXBMPlGaLwbf7b2d27b"
+									}
 								},
 								"method": "POST",
 								"header": [],
@@ -932,10 +653,54 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": ""
+											"value": "2"
 										}
 									]
 								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Acessivel ao Usuário Logado",
+					"item": [
+						{
+							"name": "Transações",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|ZzCTivJLz0y8ei7iFlV1KvrWynKWcZ5GBZZElTok919abb99"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://127.0.0.1:8000/api/user/transactions"
+							},
+							"response": []
+						},
+						{
+							"name": "Criar transação",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "2|ZzCTivJLz0y8ei7iFlV1KvrWynKWcZ5GBZZElTok919abb99"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 3,\r\n    \"amount\": 5,\r\n    \"card\": \"5569000000006063\",\r\n    \"cvv\": \"100\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/transactions"
 							},
 							"response": []
 						}
