@@ -16,7 +16,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
 ## Como Rodar o Projeto
 
-### 1. Clone o repositório (substitua pela URL do seu repositório quando disponível):
+### 1. Clone o repositório:
 
 ```bash
 
