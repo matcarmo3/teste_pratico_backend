@@ -14,7 +14,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
 ## Como Rodar o Projeto
 
-1. Clone o repositório (substitua pela URL do seu repositório quando disponível):
+### 1. Clone o repositório (substitua pela URL do seu repositório quando disponível):
 
     ```bash
     git clone https://github.com/matcarmo3/teste_pratico_backend
@@ -22,29 +22,31 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
     ```
 
-2. Instale as dependências do projeto:
+### 2. Instale as dependências do projeto:
 
     ```bash
     composer install
 
     ```
 
-3. Configure o ambiente:
+### 3. Configure o ambiente:
 
 -   Duplique o arquivo .env.example e renomeie-o para .env.
--   Configure o banco de dados no .env e rode as migrações com as seed:
+-   Certifique-se de ter um servidor MySQL rodando, seja em um container Docker ou localmente. Após garantir que o MySQL está em execução, configure as credenciais no arquivo .env para conectar o Laravel ao banco de dados.
+-   Após as configurações no .env rode as migrações com as seed:
     ```bash
     php artisan migrate --seed
     ```
 
-4. Inicie os mocks fornecidos para os gateways de pagamento:
+### 4. Inicie os mocks fornecidos para os gateways de pagamento:
 
     ```bash
     docker run -p 3001:3001 -p 3002:3002 matheusprotzen/gateways-mock
 
     ```
 
-5. Por fim, inicie o servidor:
+### 5. Por fim, inicie o servidor:
+
     ```bash
     php artisan serve
     ```
