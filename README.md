@@ -16,7 +16,7 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 
 ## Como Rodar o Projeto
 
-1. **Clone o repositório (substitua pela URL do seu repositório quando disponível):**
+### 1. Clone o repositório (substitua pela URL do seu repositório quando disponível):
 
 ```bash
 
@@ -28,7 +28,7 @@ cd teste_pratico_backend
 
 ```
 
-**2. Instale as dependências do projeto:**
+### 2. Instale as dependências do projeto:
 
 ```bash
 
@@ -38,7 +38,7 @@ composer install
 
 ```
 
-**3. Configure o ambiente:**
+### 3. Configure o ambiente:
 
 -   Duplique o arquivo .env.example e renomeie-o para .env.
 
@@ -52,7 +52,7 @@ php artisan migrate --seed
 
 ```
 
-**4. Inicie os mocks fornecidos para os gateways de pagamento:**
+### 4. Inicie os mocks fornecidos para os gateways de pagamento:
 
 ```bash
 
@@ -62,7 +62,7 @@ docker run -p 3001:3001 -p 3002:3002 matheusprotzen/gateways-mock
 
 ```
 
-**5. Por fim, inicie o servidor:**
+### 5. Por fim, inicie o servidor:
 
 ```bash
 
