@@ -286,6 +286,4 @@ php artisan serve
 
 -   Como fazia algum tempo que não desenvolvia APIs, precisei me atualizar sobre as novidades da nova versão do Laravel e a forma como ela trata algumas funcionalidades. Além disso, precisei organizar bem o controle de permissões (roles) e o fluxo das transações para que fossem claros e funcionais.# Teste Prático Back-end
 
-Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi o projeto mirando o **nível 2**, mas também implementei algumas funcionalidades do **nível 3**, como as roles (controle de permissões). Espero que este resultado esteja de acordo com as expectativas. Além disso, procurei seguir boas práticas de desenvolvimento e organizar o código de forma escalável e clara.
-
 ---
