@@ -9,18 +9,30 @@ class Transaction extends Model
     protected $fillable = [
         'external_id',
         'user_id',
-        'product_id',
         'gateway_id',
-        'price',
-        'quantity',
         'total',
         'card_last_numbers',
         'status',
     ];
 
-    public function product()
+    protected $with = ['products'];
+
+    public function getProductsAttribute()
     {
-        return $this->belongsTo(Product::class);
+        return $this->productsRelation->map(function ($product) {
+            return [
+                'product_id' => $product->id,
+                'quantity' => $product->pivot->quantity,
+                'price' => $product->pivot->price
+            ];
+        });
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'transaction_products')
+            ->withPivot(['quantity', 'price'])
+            ->withTimestamps();
     }
 
     public function gateway()
@@ -32,5 +44,4 @@ class Transaction extends Model
     {
         return $this->belongsTo(User::class);
     }
-
 }

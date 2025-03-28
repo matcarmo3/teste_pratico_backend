@@ -15,10 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('external_id');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
             $table->foreignId('gateway_id')->constrained('gateways')->onDelete('cascade');
-            $table->decimal('price', 10, 2);
-            $table->integer('quantity');
             $table->decimal('total', 10, 2);
             $table->string('card_last_numbers');
             $table->string('status');

@@ -15,12 +15,13 @@ Olá a todos, este é o resultado do meu teste prático de back-end. Desenvolvi 
 ---
 
 ## Requisitos
+
 ### Antes de rodar o projeto, verifique se você possui as seguintes ferramentas instaladas:
 
-- PHP 8.0 ou superior: O Laravel 12 requer o PHP 8.0 ou superior.
-- Composer: Gerenciador de dependências do PHP.
-- MySQL: Banco de dados para armazenar as informações do sistema. Você pode usar MySQL localmente ou via Docker.
-- Docker (opcional): Se preferir rodar o MySQL em um container Docker, pode usar a versão do MySQL com o comando Docker fornecido acima.
+-   PHP 8.0 ou superior: O Laravel 12 requer o PHP 8.0 ou superior.
+-   Composer: Gerenciador de dependências do PHP.
+-   MySQL: Banco de dados para armazenar as informações do sistema. Você pode usar MySQL localmente ou via Docker.
+-   Docker (opcional): Se preferir rodar o MySQL em um container Docker, pode usar a versão do MySQL com o comando Docker fornecido acima.
 
 ---
 
@@ -256,13 +257,18 @@ php artisan serve
 
 ```json
 {
-    "product_id": 1,
-
-    "amount": 5,
-
+    "products": [
+        {
+            "id": 1,
+            "quantity": 3
+        },
+        {
+            "id": 5,
+            "quantity": 1
+        }
+    ],
     "card": "5569000000006063",
-
-    "cvv": "100"
+    "cvv": "130"
 }
 ```
 

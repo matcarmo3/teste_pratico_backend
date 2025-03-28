@@ -19,11 +19,13 @@ class Product extends Model
 
     public function transactions()
     {
-        return $this->hasMany(Transaction::class);
+        return $this->belongsToMany(Transaction::class, 'transaction_products')
+            ->withPivot(['quantity', 'price'])
+            ->withTimestamps();
     }
 
     public function total($amount)
     {
-        return number_format($this->price * $amount, 2, '.', '');
+        return round($this->price * $amount, 2);
     }
 }
